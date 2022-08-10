@@ -2,5 +2,7 @@
     "cSpell.words": [
         "Cupertino",
         "Schyler"
-    ]
+    ],
+    "deno.enable": true,
+    "deno.unstable": true
 }
