@@ -32,7 +32,7 @@ serve(async (req) => {
   }
 
   return serveDir(req, {
-    fsRoot: "./public",
+    fsRoot: "./deno_server/public",
     urlRoot: "",
     showDirListing: true,
     enableCors: true,
