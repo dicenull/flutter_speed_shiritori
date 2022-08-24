@@ -15,11 +15,15 @@
     <button id="nextWordSendButton">送信</button>
 
     <script type="module">
+      const header = {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "https://dicenull.github.io/",
+      };
       window.onload = async (event) => {
         await fetch("/shiritori", {
           method: "POST",
 
-          headers: { "Content-Type": "application/json" },
+          headers: header,
 
           body: JSON.stringify({ nextWord: "りんご" }),
         });
@@ -39,7 +43,7 @@
           const response = await fetch("/shiritori", {
             method: "POST",
 
-            headers: { "Content-Type": "application/json" },
+            headers: header,
             body: JSON.stringify({ nextWord }),
           });
           if (response.status / 100 !== 2) {
