@@ -4,8 +4,6 @@ import { serveDir } from "https://deno.land/std@0.138.0/http/file_server.ts";
 
 let previousWord = "しりとり";
 
-console.log("Listening on http://localhost:8000");
-
 serve(async (req) => {
   const pathname = new URL(req.url).pathname;
 
